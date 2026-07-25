@@ -1,0 +1,28 @@
+# Bike-share hourly demand forecaster — configuration
+
+data:
+  url: "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip"
+  raw_dir: "data/raw"
+  raw_csv: "data/raw/hour.csv"
+  processed_dir: "data/processed"
+
+split:
+  # Time-based split (NOT random) — train on the past, test on the future.
+  # Cutoff date is exclusive for train, inclusive for test.
+  test_start_date: "2012-10-01"
+
+model:
+  random_forest:
+    n_estimators: 300
+    max_depth: 14
+    min_samples_leaf: 2
+    random_state: 42
+    n_jobs: -1
+  linear_regression: {}
+
+output:
+  models_dir: "models"
+  model_path: "models/model.joblib"
+  metrics_path: "models/metrics.json"
+  plot_path: "models/actual_vs_predicted.png"
+  feature_importance_path: "models/feature_importance.png"

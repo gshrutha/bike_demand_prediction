@@ -1,0 +1,42 @@
+{
+  "results": {
+    "linear_regression": {
+      "mae": 112.39,
+      "rmse": 148.12
+    },
+    "random_forest": {
+      "mae": 56.66,
+      "rmse": 82.3
+    }
+  },
+  "best_model": "random_forest",
+  "test_start_date": "2012-10-01",
+  "feature_columns": [
+    "yr",
+    "holiday",
+    "workingday",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed",
+    "hr_sin",
+    "hr_cos",
+    "mnth_sin",
+    "mnth_cos",
+    "season_1",
+    "season_2",
+    "season_3",
+    "season_4",
+    "weathersit_1",
+    "weathersit_2",
+    "weathersit_3",
+    "weathersit_4",
+    "weekday_0",
+    "weekday_1",
+    "weekday_2",
+    "weekday_3",
+    "weekday_4",
+    "weekday_5",
+    "weekday_6"
+  ]
+}
